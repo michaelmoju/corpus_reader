@@ -100,7 +100,7 @@ def read_so(fh):
 				for special_token in special_tokens.keys():
 					if special_token in word:
 						word = re.sub(special_token, special_tokens[special_token], word)
-				myToken = Token(id[4:-1], word, start, end, pos[6:-1], dep_type, dep_head)
+				myToken = Token(id[4:-1], word, start, end, pos[5:-1], dep_type, dep_head)
 				tokens.append(myToken)
 			else:
 				lprint("len(data):{}".format(len(data)))
